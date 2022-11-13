@@ -1,0 +1,223 @@
+@font-face {
+    font-family: 'Alienor';
+    src: url('type/AlienorDisplay-Regular.ttf') format('truetype');
+    src: url('type/AlienorDisplay-Regular.woff') format('woff');
+    font-weight: normal;
+}
+
+:root {
+    --bg: white;
+    --txt: black;
+    --no: rgb(170,170,170);
+}
+
+* {
+    margin: 2px 3px;
+    cursor: default;
+    transition: ease-in-out 0.3s;
+}
+
+body {
+    background-color: var(--bg);
+}
+
+
+
+/* Main */
+.menu {
+    width: 20%;
+    height: calc(100vh - 6px);
+    position: fixed;
+}
+
+.content {
+    margin-left: 20%;
+    width: 79%;
+    height: calc(100vh - 6px);
+}
+
+.gd {
+    font-family: Helvetica, sans-serif;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 52px;
+    color: var(--txt);
+    cursor: pointer;
+}
+
+.jail {
+    font-family: Alienor;
+    color: var(--bg);
+    font-size: 108px;
+    -webkit-text-stroke-color: var(--txt);
+    transform: skew(-20deg, 0deg) scaleX(0.35) translate(361px, -119.7px);
+    -webkit-text-stroke-width: 1px;
+    transform-origin: top left;
+    cursor: pointer;
+}
+
+.check {
+    display: grid;
+    grid-template-columns: 1em auto;
+    transform: translate(0,-100px);
+    color: var(--txt);
+  }
+
+.check li {
+    display: inline-flex;
+    position: relative;
+    counter-increment: inst;
+    margin-left: 40px;
+    padding-left: 4px;
+    padding-right: 6px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    font-size: 40px;
+    line-height: 48px;
+}
+.check li::before {
+    position: relative;
+    display: inline-block;
+    content: "(" counter(inst) ")";
+    min-width: 70px;
+}
+
+.check li:hover {
+    background-color: var(--txt);
+    color: var(--bg);
+}
+
+input[type="checkbox"] {
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: var(--bg);
+    margin: 0;
+    color: var(--txt);
+    width: 24px;
+    height: 24px;
+    border: 1px solid currentColor;
+    border-radius: 40px;
+    transform: translateY(7px);
+    place-content: center;
+    display: grid;
+    cursor: pointer;
+}
+
+input[type="checkbox"]::before {
+    content: "";
+    width: 14px;
+    height: 14px;
+    border-radius: 40px;
+    transform: scale(0);
+    /* clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%); */
+    box-shadow: inset 20px 20px currentColor;
+  }
+  
+input[type="checkbox"]:checked::before {
+    transform: scale(1);
+}
+
+.strike1 {
+    position: absolute;
+    left: -7px;
+    top: 16px;
+    height: 2px;
+    background: var(--txt);
+    transform: rotate(-45deg);
+    content: "";
+    width: 32px;
+    display: none;
+  }
+
+#final {
+    cursor: not-allowed;
+    border: 1px solid var(--no);
+}
+
+#final:active {
+    pointer-events: none;
+}
+
+#question {
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: var(--bg);
+    color: var(--no);
+    width: auto;
+    max-width: 70%;
+    height: auto;
+    border: 1px solid currentColor;
+    border-radius: 14px;
+    position:absolute;
+    bottom: 12px;
+    font-family: Helvetica, sans-serif;
+    font-size: 15px;
+    line-height: 18.5px;
+    text-align: center;
+    padding: 2px 6.5px;
+    cursor: not-allowed;
+}
+
+#question:active {
+    pointer-events: none;
+}
+
+h1 {
+    font-family: AppleGothic, sans-serif;
+    font-weight: normal;
+}
+
+@keyframes blink {
+    0% {
+        box-shadow: none;
+    }
+    50% {
+        box-shadow: 0 0 12px 2px var(--txt);
+    }
+    100% {
+        box-shadow: none;
+    }
+}
+
+
+/* Page 0 */
+h2 {
+    color: var(--txt);
+    transform: translateY(6px);
+}
+
+
+
+/* Page 1 */
+.p1 {
+    opacity: 0;
+    max-width: inherit;
+    height: calc(100vh - 6px);
+    position: absolute;
+    color: #C6EAFF;
+    top: -6px;
+}
+
+.p1t {
+    font-family: freight-display-pro, serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 15vw;
+    line-height: 13vw;
+    text-shadow:0px 0px 12px #C6EAFF;
+    transform: scaleX(0.25);
+    transform-origin: top left;
+    text-decoration-thickness: 5px;
+}
+
+.p1 .check {
+    position: absolute;
+    top: auto;
+    bottom: -91px;
+    grid-template-columns: repeat(5,32px);
+}
+
+.p1 input[type="checkbox"] {
+    grid-row: 1;
+    color: #C6EAFF;
+}
