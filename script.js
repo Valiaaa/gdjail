@@ -47,16 +47,16 @@ $('#stretched4').click(function() {
 setInterval(() => {
     if ($('#stretched1,#stretched2,#stretched4').is(":checked"))
     {
-        hint=("Stretched text is unideal.");
+        hint=("Stretched font is unideal.");
         $('#question').css({'animation': 'none'});
-        $('.p1t').html("Stretched<br>Text");
+        $('.p1t').html("Stretched<br>Font");
         $('.p1 input[type="checkbox"]').css({"color": "var(--txt)"});
     }
     else if ($('#stretched3').is(":checked"))
     {
         hint=("Yes, the typeface should remain how it designed to be. If you stretch it, the proportion of its glyph will be distorted.<br><br>When you want a condensed / expanded text in your design, try to search for a matching variable type.");
         $('#question').css({'animation': 'blink 1.5s linear infinite'});
-        $('.p1t').html("<span style='text-decoration: line-through;'>Stretched</span><br>Text");
+        $('.p1t').html("<span style='text-decoration: line-through;'>Stretched</span><br>Font");
         $('.p1 input[type="checkbox"]').css({"color": "var(--no)"});
         $('.strike1').css({"display": "block"});
     }
