@@ -34,6 +34,7 @@ body {
     margin-left: 20%;
     width: 79%;
     height: calc(100vh - 6px);
+    overflow: hidden;
 }
 
 .gd {
