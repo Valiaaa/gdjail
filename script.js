@@ -22,8 +22,14 @@ $('.p1 input[type="checkbox"]').bind('click', function() {
 //navigation check
 $('#stretch').click(function() {
     $(":root").css({"--bg": "#5E1313", "--txt": "#C6EAFF"});
-    $('.p0').css("opacity","0");
+    $('.p0, .p2').css("opacity","0");
     $('.p1').css("opacity","1");
+});
+
+$('#caption').click(function() {
+    $(":root").css({"--bg": "#FBFFC9", "--txt": "#43738D"});
+    $('.p0, .p1').css("opacity","0");
+    $('.p2').css("opacity","1");
 });
 
 
@@ -77,7 +83,7 @@ $('.gd, .jail').click(function() {
     else
     {
         $('.p0').css("opacity","1");
-        $('.p1').css("opacity","0");
+        $('.p1, .p2').css("opacity","0");
         $(":root").css({"--bg": "white", "--txt": "black"});
         $("#question").css({"cursor": "not-allowed", "color": "var(--no)", 'animation': 'none'}).html("?");
         $("#question:active").css({"pointer-events": "none"});
