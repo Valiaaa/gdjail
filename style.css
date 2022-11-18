@@ -184,7 +184,20 @@ h1 {
 /* Page 0 */
 h2 {
     color: var(--txt);
-    transform: translateY(6px);
+    margin-top: 0px;
+    font-family: freight-display-pro, serif;
+    font-weight: normal;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+h3 {
+    color: var(--txt);
+    font-family: freight-text-pro, serif;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 30px;
+    max-width: 60%;
+    margin-bottom: 18px;
 }
 
 
@@ -208,7 +221,6 @@ h2 {
     text-shadow:0px 0px 12px #C6EAFF;
     transform: scaleX(0.25);
     transform-origin: top left;
-    text-decoration-thickness: 5px;
 }
 
 .p1 .check {
