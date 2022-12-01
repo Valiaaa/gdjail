@@ -21,6 +21,12 @@ body {
     background-color: var(--bg);
 }
 
+a {
+    color: inherit;
+    font-style: italic;
+    cursor: pointer;
+}
+
 
 
 /* Main */
@@ -91,7 +97,7 @@ body {
 input[type="checkbox"] {
     -webkit-appearance: none;
     appearance: none;
-    background-color: var(--bg);
+    background-color: none;
     margin: 0;
     color: var(--txt);
     width: 24px;
@@ -117,18 +123,6 @@ input[type="checkbox"]::before {
 input[type="checkbox"]:checked::before {
     transform: scale(1);
 }
-
-.strike1 {
-    position: absolute;
-    left: -7px;
-    top: 16px;
-    height: 2px;
-    background: var(--txt);
-    transform: rotate(-45deg);
-    content: "";
-    width: 32px;
-    display: none;
-  }
 
 #final {
     cursor: not-allowed;
@@ -208,7 +202,7 @@ h3 {
     max-width: inherit;
     height: calc(100vh - 6px);
     position: absolute;
-    color: #C6EAFF;
+    color: var(--txt);
     top: -6px;
 }
 
@@ -218,7 +212,7 @@ h3 {
     font-style: normal;
     font-size: 15vw;
     line-height: 13vw;
-    text-shadow:0px 0px 12px #C6EAFF;
+    text-shadow:0px 0px 12px var(--txt);
     transform: scaleX(0.25);
     transform-origin: top left;
 }
@@ -227,10 +221,78 @@ h3 {
     position: absolute;
     top: auto;
     bottom: -91px;
-    grid-template-columns: repeat(5,32px);
+    grid-template-columns: repeat(4,32px);
 }
 
 .p1 input[type="checkbox"] {
     grid-row: 1;
-    color: #C6EAFF;
+    color: var(--txt);
 }
+
+.strike1 {
+    position: absolute;
+    left: -7px;
+    top: 16px;
+    height: 2px;
+    background: var(--txt);
+    transform: rotate(-45deg);
+    content: "";
+    width: 32px;
+    display: none;
+  }
+
+
+
+/* Page 2 */
+.p2 {
+    opacity: 0;
+    max-width: inherit;
+    height: calc(100vh - 6px);
+    position: absolute;
+    color: var(--txt);
+    top: 3px;
+}
+
+.p2t1 {
+    font-family: freight-display-pro, serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 35px;
+    line-height: 40px;
+    margin-bottom: 18px;
+}
+
+.p2t2 {
+    font-family: freight-display-pro, serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 22px;
+    line-height: 28px;
+    text-shadow:0px 0px 12px var(--txt);
+    width: 420px;
+    margin-bottom: 14px;
+}
+
+.p2 .check {
+    position: absolute;
+    top: auto;
+    bottom: -82px;
+    grid-template-columns: repeat(4,32px);
+}
+
+.p2 input[type="checkbox"] {
+    grid-row: 1;
+    color: var(--txt);
+}
+
+.strike2 {
+    position: absolute;
+    left: -7px;
+    top: 55px;
+    height: 2px;
+    background: var(--txt);
+    transform: rotate(-45deg);
+    content: "";
+    width: 32px;
+    display: none;
+  }
