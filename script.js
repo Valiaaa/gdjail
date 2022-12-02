@@ -2,25 +2,20 @@ $(document).ready(function(){
 
 var hint
 
-$('#question').click(function() {
-    $(this).css({"text-align": "left"}).html($(this).html() == hint ? '?' : hint);
-});
-
 
 //check box
 $('.menu input[type="checkbox"]').bind('click', function() {
     $('.menu input[type="checkbox"]').not(this).prop('checked', false);
-    $("#question").css({"cursor": "pointer", "color": "var(--txt)"});
 });
 
 $('.p1 input[type="checkbox"]').bind('click', function() {
     $('.p1 input[type="checkbox"]').not(this).prop('checked', false);
-    $('#question').html("?");
+    hint=("I'm watching you. And I'll always be watching you...");
 });
 
 $('.p2 input[type="checkbox"]').bind('click', function() {
     $('.p2 input[type="checkbox"]').not(this).prop('checked', false);
-    $('#question').html("?");
+    hint=("I'm watching you. And I'll always be watching you...");
 });
 
 
@@ -29,12 +24,16 @@ $('#stretch').click(function() {
     $(":root").css({"--bg": "#5E1313", "--txt": "#C6EAFF"});
     $('.p0, .p2').css("opacity","0").hide();
     $('.p1').css("opacity","1").show();
+    $('#stretched1').prop('checked', true);
+    $('.p2 input[type="checkbox"]').prop('checked', false);
 });
 
 $('#width').click(function() {
     $(":root").css({"--bg": "#FBFFC9", "--txt": "#43738D"});
     $('.p0, .p1').css("opacity","0").hide();
     $('.p2').css("opacity","1").show();
+    $('#width1').prop('checked', true);
+    $('.p1 input[type="checkbox"]').prop('checked', false);
 });
 
 
@@ -58,7 +57,7 @@ $('#stretched4').click(function() {
 setInterval(() => {
     if ($('#stretched1,#stretched2,#stretched4').is(":checked"))
     {
-        hint=("Stretched font is unideal.");
+        hint=("If you think it's sexy...");
         $('.p1t').html("Stretched<br>Font");
         $('.p1 input[type="checkbox"]').css({"color": "var(--txt)"});
     }
@@ -66,7 +65,6 @@ setInterval(() => {
     {
         hint=("Yes, the typeface should remain how it designed to be. If you stretch it, the proportion of its glyph will be distorted.<br><br>When you want a condensed / expanded text in your design, try to search for a matching variable type.");
         $('.p1t').html("<span style='text-decoration: line-through; text-decoration-thickness: 5px;'>Stretched</span><br>Font");
-        $('.p1 input[type="checkbox"]').css({"color": "var(--no)"});
         $('.strike1').css({"display": "block"});
     }
 }, 1);
@@ -100,7 +98,6 @@ setInterval(() => {
     {
         hint=("Yes, the typeface should remain how it designed to be. If you stretch it, the proportion of its glyph will be distorted.<br><br>When you want a condensed / expanded text in your design, try to search for a matching variable type.");
         $('.p2t1').html("<span style='text-decoration: line-through; text-decoration-thickness: 2px; margin: 0px;'>Hard-to-read</span> Text Block");
-        $('.p2 input[type="checkbox"]').css({"color": "var(--no)"});
         $('.strike2').css({"display": "block"});
     }
 }, 1);
@@ -122,9 +119,13 @@ $('.gd, .jail').click(function() {
         $('.p0').css("opacity","1").show();
         $('.p1, .p2').css("opacity","0").hide();
         $(":root").css({"--bg": "white", "--txt": "black"});
-        $("#question").css({"cursor": "not-allowed", "color": "var(--no)", 'animation': 'none'}).html("?");
+        hint=("Sup, I don't know why you end up here in Graphic Design jail and I don't care.");
         $("#question:active").css({"pointer-events": "none"});
     }
+  }, 1);
+
+  setInterval(() => {
+    $('#question').html(hint);
   }, 1);
 
 
