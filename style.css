@@ -75,7 +75,7 @@ a {
 .check {
     display: grid;
     grid-template-columns: 1em auto;
-    transform: translate(0,-100px);
+    transform: translate(2px,-100px);
     color: var(--txt);
   }
 
@@ -153,6 +153,7 @@ input[type="checkbox"]:checked::before {
     border: 1px solid currentColor;
     border-radius: 14px;
     position:absolute;
+    left: 2px;
     bottom: 7px;
     font-family: Bitmap;
     font-size: 16px;
@@ -230,7 +231,7 @@ h3 {
     position: absolute;
     top: auto;
     bottom: -91px;
-    left: -4px;
+    left: -6px;
     grid-template-columns: repeat(4,32px);
 }
 
@@ -288,7 +289,7 @@ h3 {
     position: absolute;
     top: auto;
     bottom: -82px;
-    left: -4px;
+    left: -6px;
     grid-template-columns: repeat(4,32px);
 }
 
