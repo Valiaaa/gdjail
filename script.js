@@ -55,17 +55,29 @@ $('#stretched4').click(function() {
 });
 
 setInterval(() => {
-    if ($('#stretched1,#stretched2,#stretched4').is(":checked"))
+    if ($('#stretched1').is(":checked"))
     {
-        hint=("If you think it's sexy...");
+        hint=("If you think it's sexy and normal then I get why you are here. Stretched type is at least 6 months of jail I'm telling you.");
+        $('.p1t').html("Stretched<br>Font");
+        $('.p1 input[type="checkbox"]').css({"color": "var(--txt)"});
+    }
+    else if ($('#stretched2').is(":checked"))
+    {
+        hint=("Are you still trying to stketch that poor type!? Omg 2 more months of jail for this insane creature.");
         $('.p1t').html("Stretched<br>Font");
         $('.p1 input[type="checkbox"]').css({"color": "var(--txt)"});
     }
     else if ($('#stretched3').is(":checked"))
     {
-        hint=("Yes, the typeface should remain how it designed to be. If you stretch it, the proportion of its glyph will be distorted.<br><br>When you want a condensed / expanded text in your design, try to search for a matching variable type.");
+        hint=("Finally... The typeface should remain how it designed to be. If you stretch it, the proportion of its glyph will be distorted.<br><br>When you want a condensed / expanded text in your design, just search for a matching variable type. I'll consider reduce 3 months of jail for you.");
         $('.p1t').html("<span style='text-decoration: line-through; text-decoration-thickness: 5px;'>Stretched</span><br>Font");
         $('.strike1').css({"display": "block"});
+    }
+    else if ($('#stretched4').is(":checked"))
+    {
+        hint=("What are you doing... Fine, no comments. Enjoy your jail life.");
+        $('.p1t').html("Stretched<br>Font");
+        $('.p1 input[type="checkbox"]').css({"color": "var(--txt)"});
     }
 }, 1);
 
@@ -88,17 +100,29 @@ $('#width4').click(function() {
 });
 
 setInterval(() => {
-    if ($('#width1,#width3,#width4').is(":checked"))
+    if ($('#width1').is(":checked"))
     {
-        hint=("Stretched font is unideal.");
+        hint=("Yea, it may look fine in some occasions but only when you have multiple columns. Try harder.");
         $('.p2t1').html("Hard-to-read Text Block");
         $('.p2 input[type="checkbox"]').css({"color": "var(--txt)"});
     }
     else if ($('#width2').is(":checked"))
     {
-        hint=("Yes, the typeface should remain how it designed to be. If you stretch it, the proportion of its glyph will be distorted.<br><br>When you want a condensed / expanded text in your design, try to search for a matching variable type.");
+        hint=("Don't you feel that everything reads better in this width? If not, you just belong here.");
         $('.p2t1').html("<span style='text-decoration: line-through; text-decoration-thickness: 2px; margin: 0px;'>Hard-to-read</span> Text Block");
         $('.strike2').css({"display": "block"});
+    }
+    else if ($('#width3').is(":checked"))
+    {
+        hint=("Am I the only one that can't read this...? Let me grab my ADHD pills.");
+        $('.p2t1').html("Hard-to-read Text Block");
+        $('.p2 input[type="checkbox"]').css({"color": "var(--txt)"});
+    }
+    else if ($('#width4').is(":checked"))
+    {
+        hint=("If you are set with this one you are definitely crazy... or a marathon runner. Guess who will have 4 more months of jail for this?");
+        $('.p2t1').html("Hard-to-read Text Block");
+        $('.p2 input[type="checkbox"]').css({"color": "var(--txt)"});
     }
 }, 1);
 
@@ -119,7 +143,7 @@ $('.gd, .jail').click(function() {
         $('.p0').css("opacity","1").show();
         $('.p1, .p2').css("opacity","0").hide();
         $(":root").css({"--bg": "white", "--txt": "black"});
-        hint=("Sup, I don't know why you end up here in Graphic Design jail and I don't care.");
+        hint=("Sup, I'm Valente, your prison guard. I don't know why you end up here in Graphic Design Jail and I don't care. Just read those files on the right and show me why are you here.");
         $("#question:active").css({"pointer-events": "none"});
     }
   }, 1);
