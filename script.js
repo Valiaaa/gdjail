@@ -36,6 +36,15 @@ $('#width').click(function() {
     $('.p1 input[type="checkbox"]').prop('checked', false);
 });
 
+$('#final').click(function() {
+    $(":root").css({"--bg": "#FBFFC9", "--txt": "#43738D"});
+    $('.p0, .p1, .p2').css("opacity","0").hide();
+    $('.fi').css("opacity","1").show();
+    $(":root").css({"--bg": "white", "--txt": "black"});
+    $('.p1 input[type="checkbox"], .p2 input[type="checkbox"]').prop('checked', false);
+    hint=("Okay, I guess now it's the time for your better task. No pressure because, after all, all you need to do is make something that works for you. And that's everything design is about.");
+});
+
 
 //page1
 $('#stretched1').click(function() {
@@ -132,6 +141,16 @@ $('.gd, .jail').click(function() {
     $('.menu input[type="checkbox"]').prop('checked', false);
     $("#question").css({"cursor": "pointer", "color": "var(--txt)"});
 });
+
+setInterval(() => {
+    if ($(".strike1, .strike2").is(':hidden')) {
+
+    } else
+    {
+        $('#final').css({"cursor": "pointer", "border": "1px solid var(--txt)"});
+        $('#final:active').css({"pointer-events": "auto"});
+    }
+  }, 1);
 
   setInterval(() => {
     if ($('.menu input[type="checkbox"]').is(":checked"))
