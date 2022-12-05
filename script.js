@@ -142,13 +142,14 @@ $('.gd, .jail').click(function() {
     $("#question").css({"cursor": "pointer", "color": "var(--txt)"});
 });
 
-setInterval(() => {
+setInterval(() => { //when user click
     if ($(".strike1, .strike2").is(':hidden')) {
 
     } else
     {
         $('#final').css({"cursor": "pointer", "border": "1px solid var(--txt)"});
         $('#final:active').css({"pointer-events": "auto"});
+        //alert box show
     }
   }, 1);
 
