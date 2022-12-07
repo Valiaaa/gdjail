@@ -25,6 +25,7 @@ $('#stretch').click(function() {
     $('.p0, .p2').css("opacity","0").hide();
     $('.p1').css("opacity","1").show();
     $('#stretched1').prop('checked', true);
+    $(".p1t").css({"transform": "scaleX(0.25)"});
     $('.p2 input[type="checkbox"]').prop('checked', false);
 });
 
@@ -33,6 +34,7 @@ $('#width').click(function() {
     $('.p0, .p1').css("opacity","0").hide();
     $('.p2').css("opacity","1").show();
     $('#width1').prop('checked', true);
+    $(".p2t2").css({"width": "420px"});
     $('.p1 input[type="checkbox"]').prop('checked', false);
 });
 
@@ -43,6 +45,10 @@ $('#final').click(function() {
     $(":root").css({"--bg": "white", "--txt": "black"});
     $('.p1 input[type="checkbox"], .p2 input[type="checkbox"]').prop('checked', false);
     hint=("Okay, I guess now it's the time for your better task. No pressure because, after all, all you need to do is make something that works for you. And that's everything design is about.");
+});
+
+$('#crosswr').click(function() {
+    $("#alarm").hide();
 });
 
 
@@ -142,14 +148,15 @@ $('.gd, .jail').click(function() {
     $("#question").css({"cursor": "pointer", "color": "var(--txt)"});
 });
 
-setInterval(() => { //when user click
+checkfinal = setInterval(() => {
     if ($(".strike1, .strike2").is(':hidden')) {
 
     } else
     {
-        $('#final').css({"cursor": "pointer", "border": "1px solid var(--txt)"});
-        $('#final:active').css({"pointer-events": "auto"});
-        //alert box show
+        $('#finalwr').hide();
+        $('#final').css({"cursor": "pointer", "border": "1px solid var(--txt)", "pointer-events": "auto"});
+        $('#alarm').show();
+        checkfinal = clearInterval(checkfinal);
     }
   }, 1);
 

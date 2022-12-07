@@ -39,15 +39,15 @@ a {
 
 /* Main */
 .menu {
-    width: 17%;
+    width: 19.5%;
     height: calc(100vh - 10px);
     position: fixed;
     border-right: 1px solid var(--txt);
 }
 
 .content {
-    margin-left: 20%;
-    width: 79%;
+    margin-left: 23%;
+    width: 77%;
     height: calc(100vh - 10px);
     overflow: hidden;
 }
@@ -55,8 +55,8 @@ a {
 .gd {
     font-family: Helvetica, sans-serif;
     font-weight: 600;
-    font-size: 48px;
-    line-height: 52px;
+    font-size: 2.8vw;
+    line-height: 3vw;
     color: var(--txt);
     cursor: pointer;
 }
@@ -64,9 +64,9 @@ a {
 .jail {
     font-family: Alienor;
     color: var(--bg);
-    font-size: 108px;
+    font-size: 6.15vw;
     -webkit-text-stroke-color: var(--txt);
-    transform: skew(-20deg, 0deg) scaleX(0.35) translate(361px, -119.7px);
+    transform: skew(-20deg, 0deg) scaleX(0.35) translate(21vw, -6.75vw);
     -webkit-text-stroke-width: 1px;
     transform-origin: top left;
     cursor: pointer;
@@ -75,8 +75,10 @@ a {
 .check {
     display: grid;
     grid-template-columns: 1em auto;
-    transform: translate(2px,-100px);
     color: var(--txt);
+    position: absolute;
+    bottom: 0;
+    left: 2px;
   }
 
 .check li {
@@ -134,12 +136,18 @@ input[type="checkbox"]:checked::before {
 }
 
 #final {
+    pointer-events: none;
     cursor: not-allowed;
     border: 1px solid var(--no);
 }
 
-#final:active {
-    pointer-events: none;
+#finalwr {
+    width: 19px;
+    height: 19px;
+    position: fixed;
+    bottom: 14px;
+    border-radius: 40px;
+    cursor: not-allowed;
 }
 
 #question {
@@ -148,23 +156,51 @@ input[type="checkbox"]:checked::before {
     background-color: var(--bg);
     color: var(--txt);
     width: fit-content;
-    max-width: 80%;
+    max-width: calc(90% - 33px);
     height: auto;
+    transform: translate(2px,-6vw);
     border: 1px solid currentColor;
     border-radius: 14px;
-    position:absolute;
-    left: 2px;
-    bottom: 7px;
     font-family: Bitmap;
     font-size: 16px;
     line-height: 18.5px;
     text-align: left;
     padding: 5px 6.5px 2px 6.5px;
     cursor: default;
+    pointer-events: none;
 }
 
-#question:active {
-    pointer-events: none;
+#alarm {
+    position: fixed;
+    color: var(--txt);
+    background-color: var(--bg);
+    padding: 10vh 10vw;
+    border: 1px solid var(--txt);
+    box-shadow: 0px 0px 12px var(--txt);
+    top: 34vh;
+    left: 41vw;
+    font-family: Bitmap;
+    font-size: 20px;
+    text-align: center;
+    display: none;
+}
+
+.cross {
+    width: 24px;
+    height: 1.3px;
+    position: fixed;
+    background-color: var(--txt);
+    top: 36vh;
+    left: 41.5vw;
+}
+
+#crosswr {
+    width: 20px;
+    height: 20px;
+    position: fixed;
+    top: 35vh;
+    left: 41.7vw;
+    cursor: pointer;
 }
 
 h1 {
@@ -230,7 +266,7 @@ h3 {
 .p1 .check {
     position: absolute;
     top: auto;
-    bottom: -91px;
+    bottom: 8.5px;
     left: -6px;
     grid-template-columns: repeat(4,32px);
 }
@@ -288,7 +324,7 @@ h3 {
 .p2 .check {
     position: absolute;
     top: auto;
-    bottom: -82px;
+    bottom: 17.5px;
     left: -6px;
     grid-template-columns: repeat(4,32px);
 }
