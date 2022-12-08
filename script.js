@@ -22,7 +22,7 @@ $('.p2 input[type="checkbox"]').bind('click', function() {
 //navigation check
 $('#stretch').click(function() {
     $(":root").css({"--bg": "#5E1313", "--txt": "#C6EAFF"});
-    $('.p0, .p2').css("opacity","0").hide();
+    $('.p0, .p2, .pf, .pfm').css("opacity","0").hide();
     $('.p1').css("opacity","1").show();
     $('#stretched1').prop('checked', true);
     $(".p1t").css({"transform": "scaleX(0.25)"});
@@ -31,7 +31,7 @@ $('#stretch').click(function() {
 
 $('#width').click(function() {
     $(":root").css({"--bg": "#FBFFC9", "--txt": "#43738D"});
-    $('.p0, .p1').css("opacity","0").hide();
+    $('.p0, .p1, .pf, .pfm').css("opacity","0").hide();
     $('.p2').css("opacity","1").show();
     $('#width1').prop('checked', true);
     $(".p2t2").css({"width": "420px"});
@@ -41,8 +41,9 @@ $('#width').click(function() {
 $('#final').click(function() {
     $(":root").css({"--bg": "#FBFFC9", "--txt": "#43738D"});
     $('.p0, .p1, .p2').css("opacity","0").hide();
-    $('.fi').css("opacity","1").show();
+    $('.pf, .pfm').css("opacity","1").show();
     $(":root").css({"--bg": "white", "--txt": "black"});
+    $('#red, #green, #blue').prop('value', '255');
     $('.p1 input[type="checkbox"], .p2 input[type="checkbox"]').prop('checked', false);
     hint=("Okay, I guess now it's the time for your better task. No pressure because, after all, all you need to do is make something that works for you. And that's everything design is about.");
 });
@@ -142,6 +143,19 @@ setInterval(() => {
 }, 1);
 
 
+
+// Page Final
+$(".slider").on('change',function updateSliderValue() {
+    var therangeoutput = $(this).siblings("output").first();
+    $(therangeoutput).val($(this).val());
+    var redValue = $("#redrangevalue").val().toString();
+    var greenValue = $("#greenrangevalue").val().toString();
+    var blueValue = $("#bluerangevalue").val().toString();
+    var theColour = "rgb(" + redValue + "," + greenValue + "," + blueValue + ")";
+    $(":root").css("--bg", theColour);
+});
+
+
   //Navigation Check
 $('.gd, .jail').click(function() {
     $('.menu input[type="checkbox"]').prop('checked', false);
@@ -168,7 +182,7 @@ checkfinal = setInterval(() => {
     else
     {
         $('.p0').css("opacity","1").show();
-        $('.p1, .p2').css("opacity","0").hide();
+        $('.p1, .p2, .pf, .pfm').css("opacity","0").hide();
         $(":root").css({"--bg": "white", "--txt": "black"});
         hint=("Sup, I'm Valente, your prison guard. I don't know why you end up here in Graphic Design Jail and I don't care. Just read those files on the right and show me why are you here.");
         $("#question:active").css({"pointer-events": "none"});

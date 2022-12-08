@@ -63,7 +63,7 @@ a {
 
 .jail {
     font-family: Alienor;
-    color: var(--bg);
+    color: transparent;
     font-size: 6.15vw;
     -webkit-text-stroke-color: var(--txt);
     transform: skew(-20deg, 0deg) scaleX(0.35) translate(21vw, -6.75vw);
@@ -153,7 +153,7 @@ input[type="checkbox"]:checked::before {
 #question {
     -webkit-appearance: none;
     appearance: none;
-    background-color: var(--bg);
+    background-color: none;
     color: var(--txt);
     width: fit-content;
     max-width: calc(90% - 33px);
@@ -222,6 +222,7 @@ h1 {
 
 
 /* Page 0 */
+
 h2 {
     color: var(--txt);
     margin-top: 0px;
@@ -346,3 +347,71 @@ h3 {
     display: none;
     z-index: -1;
   }
+
+
+
+/* Page Final */
+.pf {
+    opacity: 0;
+    width: 60%;
+    height: calc(100vh - 10px);
+    padding-right: 3.5%;
+    border-right: 1px solid var(--txt);
+    position: absolute;
+    color: var(--txt);
+    top: 3px;
+}
+
+.pfm {
+    opacity: 0;
+    width: 10.5%;
+    height: calc(100vh - 6px);
+    position: absolute;
+    color: var(--txt);
+    top: 3px;
+    left: 88%;
+    font-family: Bitmap;
+    font-size: 16px;
+    line-height: 18.5px;
+    text-align: left;
+}
+
+.pfmt {
+    margin-left: 0;
+    margin-bottom: -4px;
+}
+
+.pfml {
+    line-height: 18.5px;
+    margin-left: 0;
+    margin-bottom: 0px;
+}
+
+.slider-pair {
+  width: 98%;
+  margin: -14px -4px;
+}
+
+input[type="range"] {
+  -webkit-appearance: none !important;
+  background-color: transparent;
+  width: calc(100% - 20px);
+  height: 14px;
+  border: 1px solid black;
+  border-radius: 40px;
+  margin: auto;
+  padding: 5px;
+  transform: translate(20px,-105px);
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none !important;
+  width: 16px;
+  height: 16px;
+  background-color: black;
+  border-radius: 40px;
+}
+
+.rangevalue {
+    color: transparent;
+}
