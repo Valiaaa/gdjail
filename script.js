@@ -159,6 +159,8 @@ $(".slider").on('change',function updateSliderValue() {
   //Navigation Check
 $('.gd, .jail').click(function() {
     $('.menu input[type="checkbox"]').prop('checked', false);
+    $('.p1 input[type="checkbox"]').prop('checked', false);
+    $('.p2 input[type="checkbox"]').prop('checked', false);
     $("#question").css({"cursor": "pointer", "color": "var(--txt)"});
 });
 
