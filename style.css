@@ -74,7 +74,7 @@ a {
 
 .check {
     display: grid;
-    grid-template-columns: 1em auto;
+    grid-template-columns: auto auto;
     color: var(--txt);
     position: absolute;
     bottom: 0;
@@ -292,40 +292,30 @@ h3 {
 
 
 
-/* Page 2 */
+  /* Page 2 */
 .p2 {
     opacity: 0;
     max-width: inherit;
     height: calc(100vh - 6px);
     position: absolute;
     color: var(--txt);
-    top: 3px;
+    top: -6px;
 }
 
-.p2t1 {
+.p2t {
     font-family: freight-display-pro, serif;
-    font-weight: 400;
+    font-weight: 300;
     font-style: normal;
-    font-size: 35px;
-    line-height: 40px;
-    margin-bottom: 18px;
-}
-
-.p2t2 {
-    font-family: freight-display-pro, serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 22px;
-    line-height: 28px;
+    font-size: 14vw;
+    line-height: 13vw;
     text-shadow:0px 0px 12px var(--txt);
-    width: 420px;
-    margin-bottom: 14px;
+    transform: skew(-15deg);
 }
 
 .p2 .check {
     position: absolute;
     top: auto;
-    bottom: 17.5px;
+    bottom: 8.5px;
     left: -6px;
     grid-template-columns: repeat(4,32px);
 }
@@ -347,6 +337,111 @@ h3 {
     display: none;
     z-index: -1;
   }
+
+
+
+  /* Page 3 */
+  .p3 {
+    opacity: 0;
+    max-width: inherit;
+    height: calc(100vh - 6px);
+    position: absolute;
+    color: var(--txt);
+    top: -6px;
+}
+
+.p3t {
+    font-family: freight-display-pro, serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 14vw;
+    line-height: 13vw;
+    text-shadow:0px 0px 12px var(--txt);
+}
+
+.p3 .check {
+    position: absolute;
+    top: auto;
+    bottom: 8.5px;
+    left: -6px;
+    grid-template-columns: repeat(4,32px);
+}
+
+.p3 input[type="checkbox"] {
+    grid-row: 1;
+    color: var(--txt);
+}
+
+.strike3 {
+    position: absolute;
+    left: -7px;
+    top: 94px;
+    height: 2px;
+    background: var(--txt);
+    transform: rotate(-45deg);
+    content: "";
+    width: 32px;
+    display: none;
+    z-index: -1;
+  }
+
+
+
+/* Page 3
+.p3 {
+    opacity: 0;
+    max-width: inherit;
+    height: calc(100vh - 6px);
+    position: absolute;
+    color: var(--txt);
+    top: 3px;
+}
+
+.p3t1 {
+    font-family: freight-display-pro, serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 35px;
+    line-height: 40px;
+    margin-bottom: 18px;
+}
+
+.p3t2 {
+    font-family: freight-display-pro, serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 22px;
+    line-height: 28px;
+    text-shadow:0px 0px 12px var(--txt);
+    width: 420px;
+    margin-bottom: 14px;
+}
+
+.p3 .check {
+    position: absolute;
+    top: auto;
+    bottom: 17.5px;
+    left: -6px;
+    grid-template-columns: repeat(4,32px);
+}
+
+.p3 input[type="checkbox"] {
+    grid-row: 1;
+    color: var(--txt);
+}
+
+.strike3 {
+    position: absolute;
+    left: -7px;
+    top: 94px;
+    height: 2px;
+    background: var(--txt);
+    transform: rotate(-45deg);
+    content: "";
+    width: 32px;
+    display: none;
+    z-index: -1;
+  } */
 
 
 
