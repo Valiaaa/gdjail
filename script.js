@@ -44,12 +44,21 @@ $('#skew').click(function() {
 });
 
 $('#hang').click(function() {
-    $(":root").css({"--bg": "#FBFFC9", "--txt": "#43738D"});
+    $(":root").css({"--bg": "#D8FFDD", "--txt": "#6D4C3D"});
     $('.p0, .p1, .p2, .p4, .p5, .p6, .p7, .p8, .p9, .p10, .pf, .pfm').css("opacity","0").hide();
     $('.p3').css("opacity","1").show();
     $('#hang1').prop('checked', true);
-    $(".p3t").css({"width": "420px"});
+    $(".p3t").css({"hanging-punctuation": "none"});
     $('.p1 input[type="checkbox"], .p2 input[type="checkbox"], .p4 input[type="checkbox"], .p5 input[type="checkbox"], .p6 input[type="checkbox"], .p7 input[type="checkbox"], .p8 input[type="checkbox"], .p9 input[type="checkbox"], .p10 input[type="checkbox"]').prop('checked', false);
+});
+
+$('#hyphen').click(function() {
+    $(":root").css({"--bg": "#B7C0EE", "--txt": "#210203"});
+    $('.p0, .p1, .p2, .p3, .p5, .p6, .p7, .p8, .p9, .p10, .pf, .pfm').css("opacity","0").hide();
+    $('.p4').css("opacity","1").show();
+    $('#hyphen1').prop('checked', true);
+    $(".p4t").css({"hanging-punctuation": "none"});
+    $('.p1 input[type="checkbox"], .p2 input[type="checkbox"], .p3 input[type="checkbox"], .p5 input[type="checkbox"], .p6 input[type="checkbox"], .p7 input[type="checkbox"], .p8 input[type="checkbox"], .p9 input[type="checkbox"], .p10 input[type="checkbox"]').prop('checked', false);
 });
 
 // $('#width').click(function() {
@@ -187,7 +196,7 @@ setInterval(() => {
     if ($('#hang1').is(":checked"))
     {
         hint=("You might think it looks fine but it's not, like what if it's you that's being skewed... Just find a better way.");
-        $('.p3t').html('“This is an unhanged quote.”');
+        $('.p3t').html('"This is supposed to be an unhanged <span style="text-decoration: line-through; text-decoration-thickness: 5px;">smart</span> quote."');
         $('.p3 input[type="checkbox"]').css({"color": "var(--txt)"});
     }
     else if ($('#hang2').is(":checked"))
@@ -199,7 +208,7 @@ setInterval(() => {
     else if ($('#hang3').is(":checked"))
     {
         hint=("Okay, you finally act like a normal human being... But we don't want a normal text here. Just give another shot.");
-        $('.p3t').html("Skewed Font");
+        $('.p3t').html("“This is supposed to be an unhanged smart quote.”");
         $('.p3 input[type="checkbox"]').css({"color": "var(--txt)"});
     }
     else if ($('#hang4').is(":checked"))
@@ -276,7 +285,7 @@ $('.gd, .jail').click(function() {
 });
 
 checkfinal = setInterval(() => {
-    if ($(".strike1, .strike2, .strike3").is(':hidden')) {
+    if ($(".strike1, .strike2, .strike3, .strike4, .strike5, .strike6, .strike7, .strike8, .strike9, .strike10").is(':hidden')) {
 
     } else
     {

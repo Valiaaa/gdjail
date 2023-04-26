@@ -354,8 +354,8 @@ h3 {
     font-family: freight-display-pro, serif;
     font-weight: 300;
     font-style: normal;
-    font-size: 14vw;
-    line-height: 13vw;
+    font-size: 8vw;
+    line-height: 7.5vw;
     text-shadow:0px 0px 12px var(--txt);
 }
 
@@ -376,6 +376,100 @@ h3 {
     position: absolute;
     left: -7px;
     top: 94px;
+    height: 2px;
+    background: var(--txt);
+    transform: rotate(-45deg);
+    content: "";
+    width: 32px;
+    display: none;
+    z-index: -1;
+  }
+
+
+
+    /* Page 3 */
+  .p3 {
+    opacity: 0;
+    max-width: inherit;
+    height: calc(100vh - 6px);
+    position: absolute;
+    color: var(--txt);
+    top: -6px;
+}
+
+.p3t {
+    font-family: freight-display-pro, serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 8vw;
+    line-height: 7.5vw;
+    text-shadow:0px 0px 12px var(--txt);
+}
+
+.p3 .check {
+    position: absolute;
+    top: auto;
+    bottom: 8.5px;
+    left: -6px;
+    grid-template-columns: repeat(4,32px);
+}
+
+.p3 input[type="checkbox"] {
+    grid-row: 1;
+    color: var(--txt);
+}
+
+.strike3 {
+    position: absolute;
+    left: -7px;
+    top: 94px;
+    height: 2px;
+    background: var(--txt);
+    transform: rotate(-45deg);
+    content: "";
+    width: 32px;
+    display: none;
+    z-index: -1;
+  }
+
+
+
+  /* Page 4 */
+  .p4 {
+    opacity: 0;
+    max-width: inherit;
+    height: calc(100vh - 6px);
+    position: absolute;
+    color: var(--txt);
+    top: -6px;
+}
+
+.p4t {
+    font-family: freight-display-pro, serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 6vw;
+    line-height: 6vw;
+    text-shadow:0px 0px 12px var(--txt);
+}
+
+.p4 .check {
+    position: absolute;
+    top: auto;
+    bottom: 8.5px;
+    left: -6px;
+    grid-template-columns: repeat(4,32px);
+}
+
+.p4 input[type="checkbox"] {
+    grid-row: 1;
+    color: var(--txt);
+}
+
+.strike4 {
+    position: absolute;
+    left: -7px;
+    top: 133px;
     height: 2px;
     background: var(--txt);
     transform: rotate(-45deg);
